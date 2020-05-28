@@ -1,0 +1,28 @@
+product: types: Food, Clean Living, Toys,Clothes
+add table Product_Types : typeId,Name,discount
+
+problem statement: Add functionality to give discounts based on producttype.
+case: Food Product sale_price=product_price-((Product_Price*discount)/100)
+
+
+solution:
+add saleprice column to product table
+add product type table(product type,name,discount)
+
+(from may 20 -25 sale 30%)
+run stored proc(may20 00am):to start discount:saleprice=product_price-((Product_Price*discount)/100)
+run stored proc(may25 11.59pm):to stop discount: salePrice=productprice
+
+
+
+100 10%
+10   x
+
+x=10*10
+  100
+x=1
+
+10-1 
+
+
+

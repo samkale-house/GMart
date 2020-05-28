@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZfncqU9eXl+tjDESgazoUJjE1v3qRtSpJR3Cn5xGJWi38CIoK3WAqXQ5m4c83CMERgQXXirmUIiZH4jCl0s5xA==",
+  "success": true,
+  "projectFilePath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartWebApi/GMartWebApi.csproj",
+  "expectedPackageFiles": [
+    "/home/mrmlabs/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.2/microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

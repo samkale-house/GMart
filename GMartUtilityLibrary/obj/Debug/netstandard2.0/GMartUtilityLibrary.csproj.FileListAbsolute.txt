@@ -1,0 +1,12 @@
+/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/obj/Debug/netstandard2.0/GMartUtilityLibrary.csprojAssemblyReference.cache
+/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/obj/Debug/netstandard2.0/GMartUtilityLibrary.AssemblyInfoInputs.cache
+/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/obj/Debug/netstandard2.0/GMartUtilityLibrary.AssemblyInfo.cs
+/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/obj/Debug/netstandard2.0/GMartUtilityLibrary.csproj.CoreCompileInputs.cache
+/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/bin/Debug/netstandard2.0/GMartUtilityLibrary.deps.json
+/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/bin/Debug/netstandard2.0/GMartUtilityLibrary.dll
+/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/bin/Debug/netstandard2.0/GMartUtilityLibrary.pdb
+/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/bin/Debug/netstandard2.0/GMartDataLibrary.dll
+/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/bin/Debug/netstandard2.0/GMartDataLibrary.pdb
+/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/obj/Debug/netstandard2.0/GMartUtilityLibrary.csproj.CopyComplete
+/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/obj/Debug/netstandard2.0/GMartUtilityLibrary.dll
+/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/obj/Debug/netstandard2.0/GMartUtilityLibrary.pdb

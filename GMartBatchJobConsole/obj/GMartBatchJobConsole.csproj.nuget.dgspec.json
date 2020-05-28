@@ -1,0 +1,249 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartBatchJobConsole/GMartBatchJobConsole.csproj": {}
+  },
+  "projects": {
+    "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartBatchJobConsole/GMartBatchJobConsole.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartBatchJobConsole/GMartBatchJobConsole.csproj",
+        "projectName": "GMartBatchJobConsole",
+        "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartBatchJobConsole/GMartBatchJobConsole.csproj",
+        "packagesPath": "/home/mrmlabs/.nuget/packages/",
+        "outputPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartBatchJobConsole/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mrmlabs/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj": {
+                "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj"
+              },
+              "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartServiceLibrary/GMartServiceLibrary.csproj": {
+                "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartServiceLibrary/GMartServiceLibrary.csproj"
+              },
+              "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/GMartUtilityLibrary.csproj": {
+                "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/GMartUtilityLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj",
+        "projectName": "GMartDataLibrary",
+        "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj",
+        "packagesPath": "/home/mrmlabs/.nuget/packages/",
+        "outputPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mrmlabs/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartServiceLibrary/GMartServiceLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartServiceLibrary/GMartServiceLibrary.csproj",
+        "projectName": "GMartServiceLibrary",
+        "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartServiceLibrary/GMartServiceLibrary.csproj",
+        "packagesPath": "/home/mrmlabs/.nuget/packages/",
+        "outputPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartServiceLibrary/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mrmlabs/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj": {
+                "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/GMartUtilityLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/GMartUtilityLibrary.csproj",
+        "projectName": "GMartUtilityLibrary",
+        "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/GMartUtilityLibrary.csproj",
+        "packagesPath": "/home/mrmlabs/.nuget/packages/",
+        "outputPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mrmlabs/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj": {
+                "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "LumenWorksCsvReader": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

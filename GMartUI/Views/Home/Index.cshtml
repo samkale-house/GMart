@@ -5,14 +5,14 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Select a poduct that you would like to buy</a>.</p>
+    <p>Select a poduct that you would like to buy</p>
 </div>
 
 
 <div>
     @{var displayForName = "Title";
         var displayForPrice = "Price";}
-            }
+            
     <table class="table col-6">
         <thead>
             <th></th>
@@ -44,7 +44,7 @@
         }
 
         <a asp-action="Index" asp-route-sortOrder="@ViewData["currentSort"]" asp-route-pageNumber="@(Model.PageIndex - 1)" class="btn default @disablePrevclass">Previous</a>
-        <a asp-action="Index" asp-route-sortOrder="@ViewData["currentSort"]" asp-route-currentpageNumber="@(Model.PageIndex + 1)" class="btn default @disableNextclass">Next</a>
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["currentSort"]" asp-route-pageNumber="@(Model.PageIndex + 1)" class="btn default @disableNextclass">Next</a>
 
     </div>
 </div>

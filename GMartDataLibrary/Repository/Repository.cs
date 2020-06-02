@@ -23,6 +23,11 @@ namespace GMartDataLibrary.Repository
             dbset.Add(entity);
         }
 
+        public void AddRange(IEnumerable<T> entities)
+        {
+            dbset.AddRange(entities);
+        }
+
         public IQueryable<T> GetAll()
         {
             return dbset;
@@ -83,6 +88,11 @@ namespace GMartDataLibrary.Repository
         public void Remove(T entity)
         {
             dbset.Remove(entity);
+        }
+
+        public void RemoveRange(IEnumerable<T> entities)
+        {
+            dbset.RemoveRange(entities);
         }
     }
 }

@@ -13,9 +13,15 @@ namespace GMartDataLibrary.Repository
     {
         T GetbyId(int id);
         void Add(T etity);
+
+        void AddRange(IEnumerable<T> entities);
+
         
        IQueryable<T> GetAll();
         void Remove(T entity);
+        void RemoveRange(IEnumerable<T> entities);
+
+
         /// <summary>
         /// This function is the efficient way of retriving all data based on user input,as it loads only the data required to work.It works best for large datasets as loadtime gets reduced.
         /// </summary>
@@ -27,7 +33,7 @@ namespace GMartDataLibrary.Repository
                                        Expression<Func<T, bool>> searchFilterQuery = null, //search filter 
                                        Func<IQueryable<T>, IOrderedQueryable<T>> OrderByQuery = null   //orderby query for sorting
                                        );
-        T GetFirstorDefault(string includeproperties,Expression<Func<T,bool>> searchFilterQuery=null);
+        T GetFirstorDefault(string includeproperties,Expression<Func<T,bool>> searchFilterQuery=null);        
         
 
     }

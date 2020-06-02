@@ -68,7 +68,8 @@ namespace GMartUI.Controllers
         public IActionResult Index(string sortOrder, int? pageNumber)
         {
             var result = _unitOfWork.productRepository.GetAll("");
-            return View(PaginatedGenericList<Product>.Create((IQueryable<Product>)result, pageNumber ?? 1,3));
+            var pagedlist = PaginatedGenericList<Product>.Create((IQueryable<Product>)result, pageNumber ?? 1, 3);//This creates a list from IQueryable
+            return View(pagedlist);
         }
         
 

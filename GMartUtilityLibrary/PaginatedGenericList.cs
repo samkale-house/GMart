@@ -6,6 +6,11 @@ using System.Text;
 
 namespace GMartUtilityLibrary
 {
+    /// <summary>
+    /// Class that extends List,to give the pagination functionality.Provides HasPPreviousPage,HasNextPage,PageIndex and TotalPages properties.
+    /// Provides create method that returns paginated list
+    /// </summary>
+    /// <typeparam name="T">T is a entity type for entityset to be paginated</typeparam>
     public class PaginatedGenericList<T>:List<T>
     {
         public int PageIndex;
@@ -32,6 +37,13 @@ namespace GMartUtilityLibrary
                 return (PageIndex < TotalPages);
             }
         }
+        /// <summary>
+        /// This will generate a Paginated List 
+        /// </summary>
+        /// <param name="totalItemList">Iqueryable dataset that needs to be paginated</param>
+        /// <param name="currentPageIndex">current page number</param>
+        /// <param name="pageSize">total number of records to be presented in a single page</param>
+        /// <returns>PaginatedGenericList class object</returns>
         public static PaginatedGenericList<T> Create(IQueryable<T> totalItemList, int currentPageIndex, int pageSize)
         {
             var totalRowCount = totalItemList.Count();

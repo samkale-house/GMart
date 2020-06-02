@@ -22,7 +22,7 @@ namespace GMartDataLibrary
             if (!options.IsConfigured)
             {
                 //configure to use sql
-                options.UseSqlServer("Data Source=localhost;database=MoviesDB;Uid=SA;Password=SAadmin123;MultipleActiveResultSets=true");
+                options.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;database=GMartDb;MultipleActiveResultSets=true");
             }
         }
 

@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj": {}
+    "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartDataLibrary\\GMartDataLibrary.csproj": {}
   },
   "projects": {
-    "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj": {
+    "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartDataLibrary\\GMartDataLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartDataLibrary\\GMartDataLibrary.csproj",
         "projectName": "GMartDataLibrary",
-        "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj",
-        "packagesPath": "/home/mrmlabs/.nuget/packages/",
-        "outputPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/obj/",
+        "projectPath": "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartDataLibrary\\GMartDataLibrary.csproj",
+        "packagesPath": "C:\\Users\\SamGrishma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartDataLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/mrmlabs/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\SamGrishma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -57,7 +59,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

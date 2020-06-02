@@ -6210,31 +6210,33 @@
     ]
   },
   "packageFolders": {
-    "/home/mrmlabs/.nuget/packages/": {}
+    "C:\\Users\\SamGrishma\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartServiceLibrary/GMartServiceLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartServiceLibrary\\GMartServiceLibrary.csproj",
       "projectName": "GMartServiceLibrary",
-      "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartServiceLibrary/GMartServiceLibrary.csproj",
-      "packagesPath": "/home/mrmlabs/.nuget/packages/",
-      "outputPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartServiceLibrary/obj/",
+      "projectPath": "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartServiceLibrary\\GMartServiceLibrary.csproj",
+      "packagesPath": "C:\\Users\\SamGrishma\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartServiceLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/mrmlabs/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\SamGrishma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj": {
-              "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj"
+            "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartDataLibrary\\GMartDataLibrary.csproj": {
+              "projectPath": "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartDataLibrary\\GMartDataLibrary.csproj"
             }
           }
         }
@@ -6265,7 +6267,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

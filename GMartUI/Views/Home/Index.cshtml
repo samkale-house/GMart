@@ -1,0 +1,50 @@
+﻿@model PaginatedGenericList<Product>//IEnumerable<Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Select a poduct that you would like to buy</a>.</p>
+</div>
+
+
+<div>
+    @{var displayForName = "Title";
+        var displayForPrice = "Price";}
+            }
+    <table class="table col-6">
+        <thead>
+            <th></th>
+            <th>  
+                <a asp-action="Index" asp-route-sortOrder=@ViewData["NameSortParam"]>@displayForName</a>
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder=@ViewData["PriceSortParam"]>@displayForPrice</a>
+            </th>
+            <th></th>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>image</td>
+                    <td>@Html.DisplayFor(modelitem => product.Product_Name)</td>
+                    <td>@Html.DisplayFor(modelitem => product.Product_Price)</td>
+                    <td>description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        @{var @disablePrevclass = "";
+            var @disableNextclass = "";
+            if (!Model.HasPreviousPage){ disablePrevclass = "disabled"; }
+            if (!Model.HasNextPage) { disableNextclass = "disabled"; }
+        }
+
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["currentSort"]" asp-route-pageNumber="@(Model.PageIndex - 1)" class="btn default @disablePrevclass">Previous</a>
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["currentSort"]" asp-route-currentpageNumber="@(Model.PageIndex + 1)" class="btn default @disableNextclass">Next</a>
+
+    </div>
+</div>

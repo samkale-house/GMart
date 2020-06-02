@@ -19,7 +19,7 @@ namespace GMartBatchJobConsole
             //Read from file
             //save in list.
             Console.WriteLine("Enter CSV Path");
-            string csvPath=@"/home/mrmlabs/Sam_Workspace/SAMLABS/ProductsToAdd.csv";//Console.ReadLine();
+            string csvPath= @"C:\Users\SamGrishma\source\repos\GMart\ProductsList.csv";//Console.ReadLine();
             List<Product> productList=CSVImportHelper.ReadFromCsvToProductList(csvPath);
             
             //call service to add

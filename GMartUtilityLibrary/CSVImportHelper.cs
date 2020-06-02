@@ -32,14 +32,14 @@ namespace GMartUtilityLibrary
          public static List<Product> ReadFromTableToProductList(DataTable csvTable)
         {
             List<Product> productListFromCSV = new List<Product>();
-            for (int i = 0; i < csvTable.Rows.Count; i++)
+            for (int i = 0; i < csvTable.Rows.Count-1; i++)
             {
                 productListFromCSV.Add(new Product()
                 {
                     Product_Name = csvTable.Rows[i][0].ToString(),
                     Company = csvTable.Rows[i][1].ToString(),
-                    Product_Type = Convert.ToInt32(csvTable.Rows[i][2]),
-                    Product_Price = Convert.ToDecimal(csvTable.Rows[i][3])
+                    Product_Price = Convert.ToDecimal(csvTable.Rows[i][2]),
+                    Product_Type = Convert.ToInt32(csvTable.Rows[i][3])                    
                 });
             }
             return productListFromCSV;

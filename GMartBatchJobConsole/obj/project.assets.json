@@ -5025,37 +5025,39 @@
     ]
   },
   "packageFolders": {
-    "/home/mrmlabs/.nuget/packages/": {}
+    "C:\\Users\\SamGrishma\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartBatchJobConsole/GMartBatchJobConsole.csproj",
+      "projectUniqueName": "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartBatchJobConsole\\GMartBatchJobConsole.csproj",
       "projectName": "GMartBatchJobConsole",
-      "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartBatchJobConsole/GMartBatchJobConsole.csproj",
-      "packagesPath": "/home/mrmlabs/.nuget/packages/",
-      "outputPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartBatchJobConsole/obj/",
+      "projectPath": "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartBatchJobConsole\\GMartBatchJobConsole.csproj",
+      "packagesPath": "C:\\Users\\SamGrishma\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartBatchJobConsole\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/mrmlabs/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\SamGrishma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj": {
-              "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartDataLibrary/GMartDataLibrary.csproj"
+            "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartDataLibrary\\GMartDataLibrary.csproj": {
+              "projectPath": "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartDataLibrary\\GMartDataLibrary.csproj"
             },
-            "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartServiceLibrary/GMartServiceLibrary.csproj": {
-              "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartServiceLibrary/GMartServiceLibrary.csproj"
+            "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartServiceLibrary\\GMartServiceLibrary.csproj": {
+              "projectPath": "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartServiceLibrary\\GMartServiceLibrary.csproj"
             },
-            "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/GMartUtilityLibrary.csproj": {
-              "projectPath": "/home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/GMartUtilityLibrary.csproj"
+            "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartUtilityLibrary\\GMartUtilityLibrary.csproj": {
+              "projectPath": "C:\\Users\\SamGrishma\\Source\\Repos\\GMart\\GMartUtilityLibrary\\GMartUtilityLibrary.csproj"
             }
           }
         }
@@ -5089,7 +5091,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

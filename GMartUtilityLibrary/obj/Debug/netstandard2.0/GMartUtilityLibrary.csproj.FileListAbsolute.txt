@@ -10,3 +10,15 @@
 /home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/obj/Debug/netstandard2.0/GMartUtilityLibrary.csproj.CopyComplete
 /home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/obj/Debug/netstandard2.0/GMartUtilityLibrary.dll
 /home/mrmlabs/Sam_Workspace/SAMLABS/GMart/GMartUtilityLibrary/obj/Debug/netstandard2.0/GMartUtilityLibrary.pdb
+C:\Users\SamGrishma\Source\Repos\GMart\GMartUtilityLibrary\bin\Debug\netstandard2.0\GMartUtilityLibrary.deps.json
+C:\Users\SamGrishma\Source\Repos\GMart\GMartUtilityLibrary\bin\Debug\netstandard2.0\GMartUtilityLibrary.dll
+C:\Users\SamGrishma\Source\Repos\GMart\GMartUtilityLibrary\bin\Debug\netstandard2.0\GMartUtilityLibrary.pdb
+C:\Users\SamGrishma\Source\Repos\GMart\GMartUtilityLibrary\bin\Debug\netstandard2.0\GMartDataLibrary.dll
+C:\Users\SamGrishma\Source\Repos\GMart\GMartUtilityLibrary\bin\Debug\netstandard2.0\GMartDataLibrary.pdb
+C:\Users\SamGrishma\Source\Repos\GMart\GMartUtilityLibrary\obj\Debug\netstandard2.0\GMartUtilityLibrary.csprojAssemblyReference.cache
+C:\Users\SamGrishma\Source\Repos\GMart\GMartUtilityLibrary\obj\Debug\netstandard2.0\GMartUtilityLibrary.AssemblyInfoInputs.cache
+C:\Users\SamGrishma\Source\Repos\GMart\GMartUtilityLibrary\obj\Debug\netstandard2.0\GMartUtilityLibrary.AssemblyInfo.cs
+C:\Users\SamGrishma\Source\Repos\GMart\GMartUtilityLibrary\obj\Debug\netstandard2.0\GMartUtilityLibrary.csproj.CoreCompileInputs.cache
+C:\Users\SamGrishma\Source\Repos\GMart\GMartUtilityLibrary\obj\Debug\netstandard2.0\GMartUtilityLibrary.csproj.CopyComplete
+C:\Users\SamGrishma\Source\Repos\GMart\GMartUtilityLibrary\obj\Debug\netstandard2.0\GMartUtilityLibrary.dll
+C:\Users\SamGrishma\Source\Repos\GMart\GMartUtilityLibrary\obj\Debug\netstandard2.0\GMartUtilityLibrary.pdb

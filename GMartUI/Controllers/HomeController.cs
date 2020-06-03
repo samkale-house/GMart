@@ -28,12 +28,18 @@ namespace GMartUI.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        /*  public IActionResult Index(string sortOrder,int? pageNumber)
-          {
-              //   var model = _produtService.getAllProducts();            
+         /*public IActionResult Index(string sortOrder,int? pageNumber,string searchStr)
+          {              
 
               //get from repos
               var productresult = _unitOfWork.productRepository.GetAll();
+
+            //searching 
+            if (!String.IsNullOrEmpty(searchStr))
+            {
+                productresult = productresult.Where(product => product.Product_Name.Contains(searchStr));
+            }
+            ViewData["SearchParam"] = searchStr;
 
               //Sorting
               //set viewData
@@ -65,15 +71,42 @@ namespace GMartUI.Controllers
 
               return View(pagedList);//(productresult.ToList());
           }*/
-        public IActionResult Index(string sortOrder, int? pageNumber)
-        {
-            var result = _unitOfWork.productRepository.GetAll("");
-            var pagedlist = PaginatedGenericList<Product>.Create((IQueryable<Product>)result, pageNumber ?? 1, 3);//This creates a list from IQueryable
-            return View(pagedlist);
-        }
-        
 
-        
+        //method works best for big data 
+        public IActionResult Index(string sortOrder, int? pageNumber,string searchStr)
+        {
+            ViewData["SearchParam"] = searchStr;
+            ViewData["currentSort"] = sortOrder;
+            ViewData["NameSortParam"] = string.IsNullOrEmpty(sortOrder) ? "name_desc" : "";//default sort:name asc
+            ViewData["PriceSortParam"] = sortOrder == "price" ? "price_desc" : "price";//sortOrder.equals(price) throws nullre exception                        
+
+
+            //search and sort
+            var result = _unitOfWork.productRepository.GetAll(  "", 
+                                                                product => product.Product_Name.Contains(searchStr) || searchStr == null,//where condition expression
+                                                                (IQueryable<Product> result) => {                                          //result(result of where query) input coming from getallmethod
+                                                                                                 switch (sortOrder)
+                                                                                                {
+                                                                                                   case "name_desc":
+                                                                                                   return result.OrderByDescending(p => p.Product_Name);                                                                                                   
+                                                                                                   case "price_desc":
+                                                                                                   return result.OrderByDescending(p => p.Product_Price);
+                                                                                                   case "price":
+                                                                                                   return result.OrderBy(p => p.Product_Price);
+                                                                                                   default:
+                                                                                                   //default sortby productname (a-z) ascs
+                                                                                                    return result.OrderBy(p => p.Product_Name);
+                                                                                                }
+                                                                                               }
+
+                                                            ) ;
+
+            //paging
+            var pagedlist = PaginatedGenericList<Product>.Create(result.AsQueryable<Product>(), pageNumber ?? 1, 3);//This creates a list from IQueryable
+
+            return View(pagedlist);
+        }  
+
 
 
         public IActionResult Privacy()

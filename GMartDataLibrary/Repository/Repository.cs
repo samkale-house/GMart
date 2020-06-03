@@ -33,7 +33,7 @@ namespace GMartDataLibrary.Repository
             return dbset;
         }
 
-        public IQueryable<T> GetAll(string includeproperties, Expression<Func<T, bool>> searchFilterQuery = null, Func<IQueryable<T>, IOrderedQueryable<T>> OrderByQuery = null)
+        public IEnumerable<T> GetAll(string includeproperties, Expression<Func<T, bool>> searchFilterQuery = null, Func<IQueryable<T>, IOrderedQueryable<T>> OrderByQuery = null)
         {
 
             IQueryable<T> query = dbset;
@@ -60,7 +60,7 @@ namespace GMartDataLibrary.Repository
                 return OrderByQuery(query);//.ToList()
             }
 
-            return query;//.ToList();
+            return query.ToList();
         }
 
         public T GetbyId(int id)

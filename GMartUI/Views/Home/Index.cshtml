@@ -5,10 +5,15 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Select a poduct that you would like to buy</p>
+    <p>Select a product that you would like to buy</p>
 </div>
 
 
+<form asp-action="Index" method="get">
+    <div class="form form-group"></div>
+    <input type="text" name="searchStr" value=@ViewData["SearchParam"]><!--name=<searchstring parameter name in index ation>-->
+    <input type="submit" value="Search" class="btn btn-primary" />
+</form>
 <div>
     @{var displayForName = "Title";
         var displayForPrice = "Price";}
@@ -17,10 +22,10 @@
         <thead>
             <th></th>
             <th>  
-                <a asp-action="Index" asp-route-sortOrder=@ViewData["NameSortParam"]>@displayForName</a>
+                <a asp-action="Index" asp-route-sortOrder=@ViewData["NameSortParam"] asp-route-searchStr="@ViewData["SearchParam"]">@displayForName</a>
             </th>
             <th>
-                <a asp-action="Index" asp-route-sortOrder=@ViewData["PriceSortParam"]>@displayForPrice</a>
+                <a asp-action="Index" asp-route-sortOrder=@ViewData["PriceSortParam"] asp-route-searchStr="@ViewData["SearchParam"]">@displayForPrice</a>
             </th>
             <th></th>
         </thead>
@@ -43,8 +48,8 @@
             if (!Model.HasNextPage) { disableNextclass = "disabled"; }
         }
 
-        <a asp-action="Index" asp-route-sortOrder="@ViewData["currentSort"]" asp-route-pageNumber="@(Model.PageIndex - 1)" class="btn default @disablePrevclass">Previous</a>
-        <a asp-action="Index" asp-route-sortOrder="@ViewData["currentSort"]" asp-route-pageNumber="@(Model.PageIndex + 1)" class="btn default @disableNextclass">Next</a>
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["currentSort"]" asp-route-pageNumber="@(Model.PageIndex - 1)" asp-route-searchStr="@ViewData["SearchParam"]"  class="btn default @disablePrevclass">Previous</a>
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["currentSort"]" asp-route-pageNumber="@(Model.PageIndex + 1)" asp-route-searchStr="@ViewData["SearchParam"]"  class="btn default @disableNextclass">Next</a>
 
     </div>
 </div>

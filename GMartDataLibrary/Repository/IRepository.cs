@@ -29,7 +29,7 @@ namespace GMartDataLibrary.Repository
         /// <param name="searchFilterQuery">lambda function query based on search filter</param>
         /// <param name="OrderByQuery">lambda function query based on sortorder on column</param>
         /// <returns>returns IEnumerable result</returns>
-        IQueryable<T> GetAll(string includeproperties, //for navigation properties(foreignkeyreference)
+        IEnumerable<T> GetAll(string includeproperties, //for navigation properties(foreignkeyreference)
                                        Expression<Func<T, bool>> searchFilterQuery = null, //search filter 
                                        Func<IQueryable<T>, IOrderedQueryable<T>> OrderByQuery = null   //orderby query for sorting
                                        );

@@ -10,9 +10,9 @@
 C:\Users\SamGrishma\Source\Repos\GMart\GMartDataLibrary\bin\Debug\netstandard2.0\GMartDataLibrary.deps.json
 C:\Users\SamGrishma\Source\Repos\GMart\GMartDataLibrary\bin\Debug\netstandard2.0\GMartDataLibrary.dll
 C:\Users\SamGrishma\Source\Repos\GMart\GMartDataLibrary\bin\Debug\netstandard2.0\GMartDataLibrary.pdb
-C:\Users\SamGrishma\Source\Repos\GMart\GMartDataLibrary\obj\Debug\netstandard2.0\GMartDataLibrary.csprojAssemblyReference.cache
 C:\Users\SamGrishma\Source\Repos\GMart\GMartDataLibrary\obj\Debug\netstandard2.0\GMartDataLibrary.AssemblyInfoInputs.cache
 C:\Users\SamGrishma\Source\Repos\GMart\GMartDataLibrary\obj\Debug\netstandard2.0\GMartDataLibrary.AssemblyInfo.cs
 C:\Users\SamGrishma\Source\Repos\GMart\GMartDataLibrary\obj\Debug\netstandard2.0\GMartDataLibrary.csproj.CoreCompileInputs.cache
 C:\Users\SamGrishma\Source\Repos\GMart\GMartDataLibrary\obj\Debug\netstandard2.0\GMartDataLibrary.dll
 C:\Users\SamGrishma\Source\Repos\GMart\GMartDataLibrary\obj\Debug\netstandard2.0\GMartDataLibrary.pdb
+C:\Users\SamGrishma\Source\Repos\GMart\GMartDataLibrary\obj\Debug\netstandard2.0\GMartDataLibrary.csprojAssemblyReference.cache

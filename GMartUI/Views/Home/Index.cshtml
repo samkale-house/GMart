@@ -3,53 +3,73 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Select a product that you would like to buy</p>
-</div>
+    <div class="col-12 text-center">
+        
+            <h4>Stay Home...Shop Online...Stay Safe</h4>
+            <p>Select a product that you would like to buy</p>
+        
 
+        <div class="form-group align-content-md-around">
+            <form asp-action="Index" method="get">
+                <input type="text" name="searchStr" value=@ViewData["SearchParam"]><!--name=<searchstring parameter name in index ation>-->
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </form>
+        </div>
 
-<form asp-action="Index" method="get">
-    <div class="form form-group"></div>
-    <input type="text" name="searchStr" value=@ViewData["SearchParam"]><!--name=<searchstring parameter name in index ation>-->
-    <input type="submit" value="Search" class="btn btn-primary" />
-</form>
-<div>
-    @{var displayForName = "Title";
-        var displayForPrice = "Price";}
-            
-    <table class="table col-6">
-        <thead>
-            <th></th>
-            <th>  
-                <a asp-action="Index" asp-route-sortOrder=@ViewData["NameSortParam"] asp-route-searchStr="@ViewData["SearchParam"]">@displayForName</a>
-            </th>
-            <th>
-                <a asp-action="Index" asp-route-sortOrder=@ViewData["PriceSortParam"] asp-route-searchStr="@ViewData["SearchParam"]">@displayForPrice</a>
-            </th>
-            <th></th>
-        </thead>
-        <tbody>
-            @foreach (var product in Model)
-            {
+        <div class="col-4"></div>
+
+        <div class="form-group  col-8 text-center">
+            @{var displayForName = "Title";
+                var displayForPrice = "Price";
+                var displayForType = "Category";
+                }
+
+            <table class="table">
+                <thead>
                 <tr>
-                    <td>image</td>
-                    <td>@Html.DisplayFor(modelitem => product.Product_Name)</td>
-                    <td>@Html.DisplayFor(modelitem => product.Product_Price)</td>
-                    <td>description</td>
+                <td></td>
+                <td>
+                    <a asp-action="Index" asp-route-sortOrder=@ViewData["NameSortParam"] asp-route-searchStr="@ViewData["SearchParam"]">@displayForName</a>
+                </td>
+                <td>
+                    <a asp-action="Index" asp-route-sortOrder=@ViewData["PriceSortParam"] asp-route-searchStr="@ViewData["SearchParam"]">@displayForPrice</a>
+                </td>
+                <td>
+                    <a asp-action="Index" asp-route-sortOrder=@ViewData["CategorySortParam"] asp-route-searchStr="@ViewData["SearchParam"]">@displayForType</a>
+                </td>
                 </tr>
-            }
-        </tbody>
-    </table>
-    <div>
-        @{var @disablePrevclass = "";
-            var @disableNextclass = "";
-            if (!Model.HasPreviousPage){ disablePrevclass = "disabled"; }
-            if (!Model.HasNextPage) { disableNextclass = "disabled"; }
-        }
+                </thead>
+                <tbody>
+                    @foreach (var product in Model)
+                    {
+                    <tr>
 
-        <a asp-action="Index" asp-route-sortOrder="@ViewData["currentSort"]" asp-route-pageNumber="@(Model.PageIndex - 1)" asp-route-searchStr="@ViewData["SearchParam"]"  class="btn default @disablePrevclass">Previous</a>
-        <a asp-action="Index" asp-route-sortOrder="@ViewData["currentSort"]" asp-route-pageNumber="@(Model.PageIndex + 1)" asp-route-searchStr="@ViewData["SearchParam"]"  class="btn default @disableNextclass">Next</a>
+                        @*<td><a asp-action="Details" asp-route-id=@product.ID><img src="C:/Users/SamGrishma/source/repos/GMart/Images/Food/Almond_Oil.png" class="img-responsive" style="width:100px;height:100px;" /></a></td>*@
+                        <td>
+                        <a asp-action="Details" asp-route-id=@product.ID>
+                            <img src="~/Images/@product.Product_Image" class="img-responsive" width="50" height="50" asp-append-version="true" />
+                        </a>
+                        </td>
+                        <td><a asp-action="Details" asp-route-id=@product.ID>@Html.DisplayFor(modelitem => product.Product_Name)</a></td>
+                        <td class="money"><span>$</span>@Html.DisplayFor(modelitem => product.Product_Price)</td>
+                        <td><a asp-action="Details" asp-route-id=@product.ID>@Html.DisplayFor(modelitem => product.ProductType.Type_Name)</a></td>
 
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+                @{var @disablePrevclass = "";
+                    var @disableNextclass = "";
+                    if (!Model.HasPreviousPage) { disablePrevclass = "disabled"; }
+                    if (!Model.HasNextPage) { disableNextclass = "disabled"; }
+                }
+
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["currentSort"]" asp-route-pageNumber="@(Model.PageIndex - 1)" asp-route-searchStr="@ViewData["SearchParam"]" class="btn default @disablePrevclass">Previous</a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["currentSort"]" asp-route-pageNumber="@(Model.PageIndex + 1)" asp-route-searchStr="@ViewData["SearchParam"]" class="btn default @disableNextclass">Next</a>
+
+            </div>
+        
     </div>
-</div>

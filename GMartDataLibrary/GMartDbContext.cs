@@ -6,6 +6,7 @@ namespace GMartDataLibrary
     public class GMartDbContext: DbContext// DbContext  
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
         public GMartDbContext(DbContextOptions<GMartDbContext> options) : base(options)
         {
             Console.WriteLine("From dbcontext constructor");

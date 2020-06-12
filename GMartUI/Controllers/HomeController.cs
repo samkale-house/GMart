@@ -11,6 +11,8 @@ using GMartServiceLibrary.ProductOperationServices;
 using GMartDataLibrary.Repository;
 using GMartUtilityLibrary;
 using GMartDataLibrary.Models;
+using Microsoft.AspNetCore.Hosting;
+using GMartUI.AttributeHelper;
 
 namespace GMartUI.Controllers
 {
@@ -18,14 +20,15 @@ namespace GMartUI.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         // IProductService _produtService;
-        IUnitOfWork _unitOfWork;
-        
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public HomeController(ILogger<HomeController> logger,IProductService productService,IUnitOfWork unitOfWork)
+        public HomeController(ILogger<HomeController> logger,IProductService productService,IUnitOfWork unitOfWork,IWebHostEnvironment webHostEnvironment)
         {
           //  _produtService = productService;
             _logger = logger;
             _unitOfWork = unitOfWork;
+            _webHostEnvironment = webHostEnvironment;
         }
 
          /*public IActionResult Index(string sortOrder,int? pageNumber,string searchStr)
@@ -73,16 +76,19 @@ namespace GMartUI.Controllers
           }*/
 
         //method works best for big data 
+        //[LogInfo] :Added globally
         public IActionResult Index(string sortOrder, int? pageNumber,string searchStr)
         {
             ViewData["SearchParam"] = searchStr;
             ViewData["currentSort"] = sortOrder;
             ViewData["NameSortParam"] = string.IsNullOrEmpty(sortOrder) ? "name_desc" : "";//default sort:name asc
             ViewData["PriceSortParam"] = sortOrder == "price" ? "price_desc" : "price";//sortOrder.equals(price) throws nullre exception                        
+            ViewData["CategorySortParam"] = sortOrder == "category" ? "category_desc" : "category";
+
 
 
             //search and sort
-            var result = _unitOfWork.productRepository.GetAll(  "", 
+            var result = _unitOfWork.productRepository.GetAll("ProductType", 
                                                                 product => product.Product_Name.Contains(searchStr) || searchStr == null,//where condition expression
                                                                 (IQueryable<Product> result) => {                                          //result(result of where query) input coming from getallmethod
                                                                                                  switch (sortOrder)
@@ -93,6 +99,10 @@ namespace GMartUI.Controllers
                                                                                                    return result.OrderByDescending(p => p.Product_Price);
                                                                                                    case "price":
                                                                                                    return result.OrderBy(p => p.Product_Price);
+                                                                                                   case "category_desc":
+                                                                                                   return result.OrderByDescending(p => p.ProductType.Type_Name);
+                                                                                                   case "category":
+                                                                                                   return result.OrderBy(p => p.ProductType.Type_Name);
                                                                                                    default:
                                                                                                    //default sortby productname (a-z) ascs
                                                                                                     return result.OrderBy(p => p.Product_Name);
@@ -106,9 +116,38 @@ namespace GMartUI.Controllers
 
             return View(pagedlist);
         }  
+        public IActionResult Details(int id)
+        {
+            //To do create model and return view
+            //return productnot found vieww 
+            return View();
+        }
 
+        public IActionResult Upsert()
+        {
 
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Upsert(CreateEditProductVm model)
+        {
+            if(ModelState.IsValid)
+            {
+                Product newProduct = new Product();
+                newProduct.Product_Name = model.Product_Name;
+                newProduct.Product_Price = model.Product_Price;
+                newProduct.Company = model.Company;
+                newProduct.Product_Type = model.Product_Type;//use dropdown
+                //to do: based on product type save in folder food,toys,etc
+                newProduct.Product_Image = FileHelper.GetUniqueFileName(model.Product_Image,_webHostEnvironment.WebRootPath,"Toys");
+                _unitOfWork.productRepository.Add(newProduct); 
+                _unitOfWork.productRepository.SaveDb();
+            }
+            return View(model);
+        }
 
+        //To do: Add Upsert view and action 
+        //To do: Add authorization
         public IActionResult Privacy()
         {
             return View();

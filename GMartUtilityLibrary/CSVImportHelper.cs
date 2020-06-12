@@ -39,7 +39,7 @@ namespace GMartUtilityLibrary
                     Product_Name = csvTable.Rows[i][0].ToString(),
                     Company = csvTable.Rows[i][1].ToString(),
                     Product_Price = Convert.ToDecimal(csvTable.Rows[i][2]),
-                    Product_Type = Convert.ToInt32(csvTable.Rows[i][3])                    
+                   // Product_Type = Convert.ToInt32(csvTable.Rows[i][3])    to do :fix, work with navigation property                 
                 });
             }
             return productListFromCSV;

@@ -1,9 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\packages\\bootstrap.3.4.1\\contentFiles\\Content",
-    "\\packages\\bootstrap.3.4.1\\content\\fonts"
+    "\\GMartUI",
+    "\\GMartUI\\Controllers",
+    "\\GMartUI\\Views\\Home",
+    "\\GMartUI\\wwwroot\\css",
+    "\\GMartUI\\wwwroot\\Images",
+    "\\GMartUI\\wwwroot\\Images\\Food",
+    "\\Images",
+    "\\Images\\Food"
   ],
-  "SelectedNode": "\\GMartWebApi",
+  "SelectedNode": "\\GMartUI\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

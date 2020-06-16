@@ -47,7 +47,7 @@
                         @*<td><a asp-action="Details" asp-route-id=@product.ID><img src="C:/Users/SamGrishma/source/repos/GMart/Images/Food/Almond_Oil.png" class="img-responsive" style="width:100px;height:100px;" /></a></td>*@
                         <td>
                         <a asp-action="Details" asp-route-id=@product.ID>
-                            <img src="~/Images/@product.Product_Image" class="img-responsive" width="50" height="50" asp-append-version="true" />
+                            <img src="~/Images/@product.ProductType.Type_Name/@product.Product_Image" class="img-responsive" width="50" height="50" asp-append-version="true" />
                         </a>
                         </td>
                         <td><a asp-action="Details" asp-route-id=@product.ID>@Html.DisplayFor(modelitem => product.Product_Name)</a></td>

@@ -20,6 +20,8 @@ namespace GMartDataLibrary.Repository
             {
                 productFromdb.Product_Name = product.Product_Name;
                 productFromdb.Product_Price = product.Product_Price;
+                productFromdb.Product_Type = product.Product_Type;
+                productFromdb.Product_Image = product.Product_Image;
                 _gMartDbContext.SaveChanges();
             }
         }

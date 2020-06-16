@@ -75,6 +75,9 @@ namespace GMartUI.Controllers
               return View(pagedList);//(productresult.ToList());
           }*/
 
+
+
+        
         //method works best for big data 
         //[LogInfo] :Added globally
         public IActionResult Index(string sortOrder, int? pageNumber,string searchStr)
@@ -87,7 +90,7 @@ namespace GMartUI.Controllers
 
 
 
-            //search and sort
+            //search and sort,include producttype dataset to load and get producttypename
             var result = _unitOfWork.productRepository.GetAll("ProductType", 
                                                                 product => product.Product_Name.Contains(searchStr) || searchStr == null,//where condition expression
                                                                 (IQueryable<Product> result) => {                                          //result(result of where query) input coming from getallmethod
@@ -118,30 +121,70 @@ namespace GMartUI.Controllers
         }  
         public IActionResult Details(int id)
         {
-            //To do create model and return view
-            //return productnot found vieww 
-            return View();
+            if (id!= null || id!=0)
+            {
+                //var foundProduct = _unitOfWork.productRepository.GetbyId(id);
+                var foundProduct = _unitOfWork.productRepository.GetFirstorDefault("ProductType", x => x.ID == id);
+                ProductDetailsVM model = new ProductDetailsVM();
+                model.Product_Name = foundProduct.Product_Name;
+                model.Product_Price = foundProduct.Product_Price;
+                model.Company = foundProduct.Company;
+                model.Product_ImageUrl = foundProduct.Product_Image;
+                //set image full path
+                model.ImageFullPath = FileHelper.GetImageFullPathForImage(_webHostEnvironment.WebRootPath, foundProduct.ProductType.Type_Name,foundProduct.Product_Image);
+                model.Product_Type = foundProduct.ProductType.Type_Name;
+                model.Id = id;
+                return View(model);
+            }
+            return View();//not found view
         }
 
-        public IActionResult Upsert()
+        public IActionResult Upsert(int? id)
         {
-
+            TempData["ID"] = id;
+            var types = _unitOfWork.productTypeRepo.GetAll().ToList();
+            TempData["ProductTypes"] = types;
+            
+            if (id!=null||id!=0)
+            {
+                var foundProduct = _unitOfWork.productRepository.GetFirstorDefault("ProductType", x => x.ID == id);
+                CreateEditProductVm model = new CreateEditProductVm();
+                model.Product_Name = foundProduct.Product_Name;
+                model.Product_Price = foundProduct.Product_Price;
+                model.Company = foundProduct.Company;                
+                model.ImageFullPath = FileHelper.GetImageFullPathForImage(_webHostEnvironment.WebRootPath, foundProduct.ProductType.Type_Name, foundProduct.Product_Image);
+                model.Product_Type = foundProduct.Product_Type;
+                model.ID= (int)id;//nullable to nonnullable
+                model.Types =types;
+                return View(model);
+            }
             return View();
         }
         [HttpPost]
         public IActionResult Upsert(CreateEditProductVm model)
         {
-            if(ModelState.IsValid)
+            TempData["ProductTypes"] = TempData["ProductTypes"];
+            if (ModelState.IsValid && model!=null)
             {
-                Product newProduct = new Product();
-                newProduct.Product_Name = model.Product_Name;
-                newProduct.Product_Price = model.Product_Price;
-                newProduct.Company = model.Company;
-                newProduct.Product_Type = model.Product_Type;//use dropdown
+                Product product = new Product();
+                product.Product_Name = model.Product_Name;
+                product.Product_Price = model.Product_Price;
+                product.Company = model.Company;
+                product.Product_Type = model.Product_Type;//use dropdown
                 //to do: based on product type save in folder food,toys,etc
-                newProduct.Product_Image = FileHelper.GetUniqueFileName(model.Product_Image,_webHostEnvironment.WebRootPath,"Toys");
-                _unitOfWork.productRepository.Add(newProduct); 
+                product.Product_Image = FileHelper.GetUniqueFileName(model.Product_Image,_webHostEnvironment.WebRootPath,_unitOfWork.productTypeRepo.GetbyId(model.Product_Type).Type_Name);
+                if (model.ID != 0)
+                {
+                    product.ID = model.ID;
+                    _unitOfWork.productRepository.Update(product);
+                }
+                else 
+                { 
+                    _unitOfWork.productRepository.Add(product); 
+                }
+                    
                 _unitOfWork.productRepository.SaveDb();
+                return RedirectToAction("Index");
             }
             return View(model);
         }

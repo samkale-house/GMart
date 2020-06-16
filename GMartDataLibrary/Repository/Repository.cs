@@ -75,7 +75,7 @@ namespace GMartDataLibrary.Repository
             {
                 query = query.Where(searchFilterQuery);
             }
-            if(string.IsNullOrEmpty(includeproperties))
+            if(!string.IsNullOrEmpty(includeproperties))
             {
                 foreach(string property in includeproperties.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
                 {

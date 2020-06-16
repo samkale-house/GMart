@@ -130,7 +130,6 @@ C:\Users\SamGrishma\Source\Repos\GMart\GMartUI\obj\Debug\netcoreapp3.1\GMartUI.T
 C:\Users\SamGrishma\Source\Repos\GMart\GMartUI\obj\Debug\netcoreapp3.1\GMartUI.TagHelpers.output.cache
 C:\Users\SamGrishma\Source\Repos\GMart\GMartUI\obj\Debug\netcoreapp3.1\GMartUI.RazorCoreGenerate.cache
 C:\Users\SamGrishma\Source\Repos\GMart\GMartUI\obj\Debug\netcoreapp3.1\Razor\Controllers\Details.cshtml.g.cs
-C:\Users\SamGrishma\Source\Repos\GMart\GMartUI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Details.cshtml.g.cs
 C:\Users\SamGrishma\Source\Repos\GMart\GMartUI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\SamGrishma\Source\Repos\GMart\GMartUI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\SamGrishma\Source\Repos\GMart\GMartUI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Upsert.cshtml.g.cs
@@ -152,3 +151,4 @@ C:\Users\SamGrishma\Source\Repos\GMart\GMartUI\bin\Debug\netcoreapp3.1\Microsoft
 C:\Users\SamGrishma\Source\Repos\GMart\GMartUI\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
 C:\Users\SamGrishma\Source\Repos\GMart\GMartUI\obj\Debug\netcoreapp3.1\GMartUI.csproj.CoreCompileInputs.cache
 C:\Users\SamGrishma\Source\Repos\GMart\GMartUI\obj\Debug\netcoreapp3.1\GMartUI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\SamGrishma\Source\Repos\GMart\GMartUI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Details.cshtml.g.cs

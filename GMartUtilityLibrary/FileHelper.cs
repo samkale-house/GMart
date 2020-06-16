@@ -18,7 +18,7 @@ namespace GMartUtilityLibrary
 
             if (uploadedFile != null)
             {
-                string uploadToFolder = Path.Combine(webrootPath, "images",typeName);
+                string uploadToFolder = GetImagePath(webrootPath, typeName);
                 //get name of file from uploaded file
                 string filename = Path.GetFileName(uploadedFile.FileName);
                 uniqueFileName = Guid.NewGuid().ToString() + "_" + filename;
@@ -30,6 +30,18 @@ namespace GMartUtilityLibrary
             }
             return uniqueFileName;
         }
-       
+        public static string GetImagePath(string webrootPath,string typeName)
+        {
+            return Path.Combine(webrootPath, "images", typeName);
+        }
+
+        public static string GetImageFullPathForImage(string webrootPath, string typeName,string imageName)
+        {
+            string fullImagePath;
+            fullImagePath = Path.Combine(GetImagePath(webrootPath, typeName), imageName);
+            return fullImagePath;
+        }
+
+
     }
 }

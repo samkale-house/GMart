@@ -10,13 +10,9 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Upsert" method="post" enctype="multipart/form-data" >
+        <form asp-action="Upsert" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="ID" class="control-label"></label>
-                <input asp-for="ID" class="form-control" />
-                <span asp-validation-for="ID" class="text-danger"></span>
-            </div>
+
             <div class="form-group">
                 <label asp-for="Product_Name" class="control-label"></label>
                 <input asp-for="Product_Name" class="form-control" />
@@ -34,21 +30,38 @@
             </div>
             <div class="form-group">
                 <label asp-for="Product_Type" class="control-label"></label>
-                <input asp-for="Product_Type" class="form-control" />
+                @Html.DropDownListFor(model => model.Product_Type,
+                                      new SelectList(TempData["ProductTypes"] as IEnumerable<ProductType>,
+                                      "ID", "Type_Name"),
+                                      "Select Type")
                 <span asp-validation-for="Product_Type" class="text-danger"></span>
             </div>
+
+            @{var editCreate = "Create";
+                    if (Convert.ToInt32(TempData["ID"]) > 0)
+                    {
+                        editCreate = "Edit";
+
+                <div class="form-group">
+                    <img src="@Model.ImageFullPath" class="img-responsive" width="50" height="50" asp-append-version="true" />
+                </div>
+            }
+            }
+
             <div class="form-group">
-                <label asp-for="Product_Image" class="control-label "></label>
+                <label class="control-label ">Select new Picture</label>
                 <!--For file input by browsing FileExplorer-->
                 <div class="custom-file">
                     <input asp-for="Product_Image" class="form-control custom-file-input" id="customfileinput" />
                     <label class="custom-file-label" for="customfileinput"></label>
                 </div>
-                
-                <span asp-validation-for="Product_Image" class="text-danger"></span>
+
+
             </div>
+
+
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value=@editCreate class="btn btn-primary" />
             </div>
         </form>
     </div>

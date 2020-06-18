@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GMartDataLibrary.Repository
+﻿namespace GMartDataLibrary.Repository
 {
     public interface IUnitOfWork
     {

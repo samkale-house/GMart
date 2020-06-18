@@ -1,23 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading;
 
 namespace GMartDataLibrary.Repository
 {
-    public interface IRepository<T> where T:class
+    public interface IRepository<T> where T : class
     {
         T GetbyId(int id);
         void Add(T etity);
 
         void AddRange(IEnumerable<T> entities);
 
-        
-       IQueryable<T> GetAll();
+
+        IQueryable<T> GetAll();
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entities);
 
@@ -33,8 +29,8 @@ namespace GMartDataLibrary.Repository
                                        Expression<Func<T, bool>> searchFilterQuery = null, //search filter 
                                        Func<IQueryable<T>, IOrderedQueryable<T>> OrderByQuery = null   //orderby query for sorting
                                        );
-        T GetFirstorDefault(string includeproperties,Expression<Func<T,bool>> searchFilterQuery=null);        
-        
+        T GetFirstorDefault(string includeproperties, Expression<Func<T, bool>> searchFilterQuery = null);
+
 
     }
 }

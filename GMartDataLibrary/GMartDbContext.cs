@@ -1,9 +1,9 @@
-using System;
-using Microsoft.EntityFrameworkCore;
 using GMartDataLibrary.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 namespace GMartDataLibrary
 {
-    public class GMartDbContext: DbContext// DbContext  
+    public class GMartDbContext : DbContext// DbContext  
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }

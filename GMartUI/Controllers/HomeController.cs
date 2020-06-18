@@ -145,7 +145,7 @@ namespace GMartUI.Controllers
             var types = _unitOfWork.productTypeRepo.GetAll().ToList();
             TempData["ProductTypes"] = types;
             
-            if (id!=null||id!=0)
+            if (id!=null && id!=0)
             {
                 var foundProduct = _unitOfWork.productRepository.GetFirstorDefault("ProductType", x => x.ID == id);
                 CreateEditProductVm model = new CreateEditProductVm();

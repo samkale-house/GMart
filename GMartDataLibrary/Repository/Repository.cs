@@ -3,11 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 
 namespace GMartDataLibrary.Repository
 {
-   public class Repository<T>:IRepository<T> where T:class
+    public class Repository<T> : IRepository<T> where T : class
     {
         private readonly GMartDbContext _db;
         DbSet<T> dbset;
@@ -71,13 +70,13 @@ namespace GMartDataLibrary.Repository
         public T GetFirstorDefault(string includeproperties, Expression<Func<T, bool>> searchFilterQuery = null)
         {
             IQueryable<T> query = dbset;
-            if(searchFilterQuery!=null)
+            if (searchFilterQuery != null)
             {
                 query = query.Where(searchFilterQuery);
             }
-            if(!string.IsNullOrEmpty(includeproperties))
+            if (!string.IsNullOrEmpty(includeproperties))
             {
-                foreach(string property in includeproperties.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
+                foreach (string property in includeproperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
                 {
                     query = query.Include(property);
                 }
